@@ -1,8 +1,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: oxygen-sounds
-Version: 5.26.2
-Release: 2
+Version: 5.26.3
+Release: 1
 Source0: https://download.kde.org/%{stable}/plasma/%{version}/oxygen-sounds-%{version}.tar.xz
 Summary: Sounds for the Oxygen Plasma theme
 URL: https://invent.kde.org/plasma/oxygen-sounds/
