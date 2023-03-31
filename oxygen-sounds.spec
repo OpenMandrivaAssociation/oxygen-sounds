@@ -2,7 +2,7 @@
 
 Name: oxygen-sounds
 Version: 5.27.3
-Release: 1
+Release: 2
 Source0: https://download.kde.org/%{stable}/plasma/%(echo %{version}|cut -d. -f1-3)/oxygen-sounds-%{version}.tar.xz
 Summary: Sounds for the Oxygen Plasma theme
 URL: https://invent.kde.org/plasma/oxygen-sounds/
