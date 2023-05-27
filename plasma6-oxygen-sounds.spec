@@ -15,6 +15,8 @@ License: LGPL-3.0-or-later
 Group: Graphical desktop/KDE
 BuildArch: noarch
 BuildRequires: cmake ninja extra-cmake-modules
+BuildRequires: cmake(Qt6)
+BuildRequires: cmake(Qt6Core)
 
 %description
 Sounds for the Oxygen Plasma theme
