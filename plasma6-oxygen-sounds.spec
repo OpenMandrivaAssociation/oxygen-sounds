@@ -1,5 +1,5 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define git 20230609
+%define git 20230707
 
 Name: plasma6-oxygen-sounds
 Version: 5.240.0
@@ -37,3 +37,4 @@ Sounds for the Oxygen Plasma theme
 
 %files
 %{_datadir}/sounds/Oxygen-*.ogg
+%{_datadir}/sounds/oxygen
