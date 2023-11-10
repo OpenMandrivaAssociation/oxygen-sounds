@@ -1,8 +1,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define git 20231103
+#define git 20231103
 
 Name: plasma6-oxygen-sounds
-Version: 5.240.0
+Version: 5.27.80
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/oxygen-sounds/-/archive/master/oxygen-sounds-master.tar.bz2#/oxygen-sounds-%{git}.tar.bz2
