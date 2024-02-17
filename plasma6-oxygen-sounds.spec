@@ -1,11 +1,13 @@
 %define stable %([ "$(echo %{version} |cut -d. -f2)" -ge 80 -o "$(echo %{version} |cut -d. -f3)" -ge 80 ] && echo -n un; echo -n stable)
-#define git 20231103
+%define git 20240217
+%define gitbranch Plasma/6.0
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Name: plasma6-oxygen-sounds
-Version: 5.93.0
+Version: 5.94.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
-Source0:	https://invent.kde.org/plasma/oxygen-sounds/-/archive/master/oxygen-sounds-master.tar.bz2#/oxygen-sounds-%{git}.tar.bz2
+Source0:	https://invent.kde.org/plasma/oxygen-sounds/-/archive/%{gitbranch}/oxygen-sounds-%{gitbranchd}.tar.bz2#/oxygen-sounds-%{git}.tar.bz2
 %else
 Source0: https://download.kde.org/%{stable}/plasma/%(echo %{version}|cut -d. -f1-3)/oxygen-sounds-%{version}.tar.xz
 %endif
@@ -22,7 +24,7 @@ BuildRequires: cmake(Qt6Core)
 Sounds for the Oxygen Plasma theme
 
 %prep
-%autosetup -p1 -n oxygen-sounds-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n oxygen-sounds-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DBUILD_QCH:BOOL=ON \
 	-DBUILD_WITH_QT6:BOOL=ON \
