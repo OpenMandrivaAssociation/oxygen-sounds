@@ -1,4 +1,4 @@
-%undefine _debugsource_files
+%undefine _debugsource_packages
 
 %define stable %([ "$(echo %{version} |cut -d. -f2)" -ge 80 -o "$(echo %{version} |cut -d. -f3)" -ge 80 ] && echo -n un; echo -n stable)
 #define git 20240222
