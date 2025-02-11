@@ -6,7 +6,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Name: plasma6-oxygen-sounds
-Version: 6.2.5
+Version: 6.3.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/oxygen-sounds/-/archive/%{gitbranch}/oxygen-sounds-%{gitbranchd}.tar.bz2#/oxygen-sounds-%{git}.tar.bz2
